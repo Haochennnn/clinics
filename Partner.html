@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
+    <style>
+        .navbar {
+    background: linear-gradient(135deg, #f6f6fb, #00a2d4);
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu ul li {
+    margin-left: 20px;
+}
+
+.navbar-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-menu.active {
+        display: block;
+    }
+
+    .navbar-menu ul {
+        flex-direction: column;
+    }
+
+    .navbar-menu ul li {
+        margin: 10px 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+footer {
+    background: linear-gradient(135deg, #050df5, #0047d4);
+    color: #ffffff;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(135deg, #05e9f5, #008dd4);
+    z-index: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.footer-logo {
+    flex: 0 0 auto;
+    padding-right: 20px;
+}
+
+.footer-logo img {
+    height: 80px;
+}
+
+.footer-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-info .section {
+    flex: 1;
+    min-width: 200px;
+    margin: 0 20px;
+}
+
+.footer-info .section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-info .section p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-info .section .footer-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-info .section .footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+}
+/* Swiper Slider Arrow Adjustments */
+.swiper_arrow {
+    position: absolute;
+    top: 85%;
+    width: 200px;
+}
+
+.swiper_arrow img {
+    width: 80px;
+    height: 60px;
+    object-fit: contain;
+    filter: invert(100%);
+}
+
+.swiper-button-next {
+    left: 85%;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .swiper_arrow_next {
+        left: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: block;
+        width: 100%;
+        box-shadow: none;
+        min-width: none;
+    }
+
+    .dropdown-menu .category {
+        flex-direction: column;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .dropdown-menu .category .dropdown-item {
+        display: block;
+        border-right: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .swiper_arrow_next {
+        left: 60%;
+    }
+}
+
+.img-logo{
+    width: 100px;
+}
+
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Banner dengan efek parallax */
+        .parallax-banner {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            background-image: url('images/image22.png'); /* Ganti dengan path gambar Anda */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: brightness(0.7);
+        }
+
+        .parallax-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .banner-content h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* Styling untuk bagian mitra */
+        .partners {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .partners h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .partner-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partner-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            z-index: 0;
+        }
+
+        .partner-item:hover::before {
+            opacity: 1;
+        }
+
+        .partner-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .banner-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .langkau{
+            margin-left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#"><img class="img-logo" src="images/logo1.png"</a>
+            </div>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="#">Partner</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-toggle">
+                <span>&#9776;</span>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-banner">
+        <div class="banner-content">
+            <h1>Our Partners</h1>
+        </div>
+    </div>
+
+    <div class="partners">
+        <h1>Our Valued Partners</h1>
+        <div class="partners-grid">
+            <div class="partner-item">BPJS Kesehatan</div>
+            <div class="partner-item">BPJS Ketenagakerjaan</div>
+            <div class="partner-item">Admedika</div>
+            <div class="partner-item">Bumi Putra Syariah</div>
+            <div class="partner-item">Bumi Putra Non Syariah</div>
+            <div class="partner-item">Nayaka</div>
+            <div class="partner-item">In Health</div>
+            <div class="partner-item">MNC Life</div>
+            <div class="partner-item">Manulife</div>
+            <div class="partner-item">Sinarmas</div>
+            <div class="partner-item">Aviva</div>
+            <div class="partner-item">Asuransi Ramayana</div>
+            <div class="partner-item">Trans TV</div>
+            <div class="partner-item">CS Finance</div>
+            <div class="partner-item">Adira Finance</div>
+            <div class="partner-item">Soll Marina Hotel</div>
+            <div class="partner-item">BPOM</div>
+            <div class="partner-item">Bank Sumsel</div>
+            <div class="partner-item">Bank Muammalat</div>
+            <div class="partner-item">Bank Danamon</div>
+            <div class="partner-item">PT. Taspen</div>
+            <div class="partner-item">BRI Syariah</div>
+            <div class="partner-item">Grand Vella Hotel</div>
+            <div class="partner-item">Loka Monitor</div>
+            <div class="partner-item">Novotel Hotel</div>
+            <div class="partner-item">Polda Bangka</div>
+            <div class="partner-item">PT Pos Indonesia</div>
+            <div class="partner-item">PT Trakindo CAT</div>
+            <div class="partner-item">Santika Hotel</div>
+            <div class="partner-item">UBB</div>
+            <div class="partner-item">STIMIK Atma Luhur</div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="IMAGES/footer.jpg" alt="Company Logo">
+            </div>
+            <div class="footer-info">
+                <div class="section">
+                    <h3>Contact</h3>
+                    <p>
+                        No Telepon:(0717) 4297888<br>
+                        <Span class="langkau">(0717) 439488</Span><br>
+                        Sms center: 0822-6037-5888
+                    </p>
+                </div>
+                <div class="section">
+                    <h3>Address</h3>
+                    <p><span>Indonesia, </span>Bangka Belitung, </p>
+                    <p><span>Pangkal pinang, </span>Jalan Solihin GP No.92</p>
+                </div>
+                <div class="section">
+                    <h3>Operating Hours</h3>
+                    <p>Senin - Sabtu: 08.00-21.00</p>
+                    <p>Minggu & Tanggal Merah: 08.00-15.00</p>
+                </div>
+                <div class="section">
+                    <h3>Visi</h3>
+                    <p>Menjadi Sentra Pelayanan Kesehatan yang paripurna dengan kualitas terbaik.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sun Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+                document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.querySelector('.navbar-toggle');
+            const menu = document.querySelector('.navbar-menu');
+        
+            toggleButton.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+        });
+        
+
+    </script>
+</body>
+</html>
