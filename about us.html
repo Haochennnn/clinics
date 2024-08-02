@@ -13,7 +13,7 @@
 
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -508,6 +508,7 @@ footer::before {
     margin: 0;
 }
 
+
 </style>
 <body>
     <div class="navbar">
@@ -606,20 +607,21 @@ footer::before {
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <script>AOS.init({
-        duration: 800, // Durasi animasi dalam ms
-        easing: 'ease-out', // Jenis easing animasi
-        once: true // Animasi hanya dimainkan sekali
+    <script>
+    AOS.init({
+    duration: 800, // Durasi animasi dalam ms
+    easing: 'ease-out', // Jenis easing animasi
+    once: true // Animasi hanya dimainkan sekali
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('.navbar-toggle');
+    const menu = document.querySelector('.navbar-menu');
+
+    toggleButton.addEventListener('click', () => {
+        menu.classList.toggle('active');
     });
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.querySelector('.navbar-toggle');
-        const menu = document.querySelector('.navbar-menu');
-    
-        toggleButton.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    });
-    </script>
+});
+</script>
 </body>
 
 </html>
